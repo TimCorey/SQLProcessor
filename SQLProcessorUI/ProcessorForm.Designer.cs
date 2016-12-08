@@ -63,7 +63,7 @@
             this.createSQLStatementButton.Location = new System.Drawing.Point(163, 498);
             this.createSQLStatementButton.Name = "createSQLStatementButton";
             this.createSQLStatementButton.Size = new System.Drawing.Size(185, 70);
-            this.createSQLStatementButton.TabIndex = 2;
+            this.createSQLStatementButton.TabIndex = 5;
             this.createSQLStatementButton.Text = "Create Statement";
             this.createSQLStatementButton.UseVisualStyleBackColor = true;
             this.createSQLStatementButton.Click += new System.EventHandler(this.createSQLStatementButton_Click);
@@ -82,7 +82,7 @@
             this.tableNameText.Location = new System.Drawing.Point(163, 363);
             this.tableNameText.Name = "tableNameText";
             this.tableNameText.Size = new System.Drawing.Size(327, 29);
-            this.tableNameText.TabIndex = 4;
+            this.tableNameText.TabIndex = 2;
             // 
             // tableNameLabel
             // 
@@ -101,7 +101,7 @@
             this.turnOnIdentityCheckbox.Location = new System.Drawing.Point(163, 413);
             this.turnOnIdentityCheckbox.Name = "turnOnIdentityCheckbox";
             this.turnOnIdentityCheckbox.Size = new System.Drawing.Size(15, 14);
-            this.turnOnIdentityCheckbox.TabIndex = 6;
+            this.turnOnIdentityCheckbox.TabIndex = 3;
             this.turnOnIdentityCheckbox.UseVisualStyleBackColor = true;
             // 
             // turnOnIdentityLabel
@@ -127,7 +127,7 @@
             this.outputPathText.Location = new System.Drawing.Point(163, 445);
             this.outputPathText.Name = "outputPathText";
             this.outputPathText.Size = new System.Drawing.Size(327, 29);
-            this.outputPathText.TabIndex = 9;
+            this.outputPathText.TabIndex = 4;
             // 
             // ProcessorForm
             // 
@@ -145,7 +145,7 @@
             this.Controls.Add(this.sqlStatementText);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProcessorForm";
             this.Text = "SQL Processor by Tim Corey";
             this.ResumeLayout(false);

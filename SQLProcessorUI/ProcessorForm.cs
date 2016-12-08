@@ -87,7 +87,7 @@ namespace SQLProcessorUI
                             insertStatement.Append(", ");
                         }
 
-                        insertStatement.Append($"'{ rowVal[item.Key] }'");
+                        insertStatement.Append($"'{ rowVal[item.Key].ToString().Replace("'", "''") }'");
 
                         i += 1;
                     }
