@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLProcessor.Library;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -61,14 +62,49 @@ namespace SQLProcessorUI
 
         private void processButton_Click(object sender, EventArgs e)
         {
-            resultsText.Text = $"First line of text { Environment.NewLine }";
-            int position = resultsText.TextLength;
-            string errorMessage = "Error: did not work!";
-            resultsText.Text += errorMessage + Environment.NewLine;
+            resultsText.Text = "";
+            
+            var results = FileCommands.ProcessFolder(folderPathText.Text, includeSubdirectoriesCheckbox.Checked);
 
-            resultsText.SelectionStart = position;
-            resultsText.SelectionLength = errorMessage.Length;
-            resultsText.SelectionColor = Color.Red;
+            foreach (var result in results)
+            {
+                string output = "";
+                string fileName = System.IO.Path.GetFileName(result.FileName);
+                int startPosition = resultsText.TextLength;
+                Color textColor = Color.Green;
+
+                var errors = result.CommandResults.Where(x => x.StatusId == Enums.ResultStatus.Error);
+
+                if (errors.Count() > 0)
+                {
+                    // There was an error somewhere
+                    output = $"{ fileName }: Error{ Environment.NewLine }";
+
+                    foreach (var err in errors)
+                    {
+                        output += $"{ err.StatusMessage }{ Environment.NewLine }";
+                    }
+
+                    textColor = Color.Red;
+                }
+                else
+                {
+                    // There were no errors
+                    output = $"{ fileName }: Success{ Environment.NewLine }";
+
+                    textColor = Color.Green;
+                }
+
+                // Adds a spacer line
+                output += Environment.NewLine;
+
+                // Color the text
+                resultsText.SelectionColor = textColor;
+
+                // Adds the text to the text box
+                resultsText.AppendText(output);
+
+            }
         }
     }
 }

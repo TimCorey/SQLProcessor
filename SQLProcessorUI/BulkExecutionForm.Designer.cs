@@ -155,9 +155,9 @@
             this.headerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.headerLabel.Location = new System.Drawing.Point(26, 17);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(243, 50);
+            this.headerLabel.Size = new System.Drawing.Size(319, 50);
             this.headerLabel.TabIndex = 12;
-            this.headerLabel.Text = "SQL Processor";
+            this.headerLabel.Text = "SQL Bulk Execution";
             // 
             // BulkExecutionForm
             // 
