@@ -51,16 +51,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProcessorForm.cs">
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="BulkExecuteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProcessorForm.Designer.cs">
-      <DependentUpon>ProcessorForm.cs</DependentUpon>
+    <Compile Include="BulkExecuteForm.Designer.cs">
+      <DependentUpon>BulkExecuteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertGeneratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertGeneratorForm.Designer.cs">
+      <DependentUpon>InsertGeneratorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ProcessorForm.resx">
-      <DependentUpon>ProcessorForm.cs</DependentUpon>
+    <EmbeddedResource Include="BulkExecuteForm.resx">
+      <DependentUpon>BulkExecuteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertGeneratorForm.resx">
+      <DependentUpon>InsertGeneratorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

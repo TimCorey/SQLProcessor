@@ -16,7 +16,7 @@ namespace SQLProcessorUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProcessorForm());
+            Application.Run(new BulkExecuteForm());
         }
     }
 }
