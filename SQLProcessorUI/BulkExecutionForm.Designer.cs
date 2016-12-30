@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BulkExecutionForm));
             this.resultsText = new System.Windows.Forms.RichTextBox();
             this.databaseConnectionDropDown = new System.Windows.Forms.ComboBox();
             this.selectFolderPath = new System.Windows.Forms.Button();
@@ -176,6 +177,7 @@
             this.Controls.Add(this.processFolderButton);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "BulkExecutionForm";
             this.Text = "BulkExecutionForm";

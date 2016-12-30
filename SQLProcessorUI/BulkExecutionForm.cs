@@ -99,10 +99,7 @@ namespace SQLProcessorUI
                 output += Environment.NewLine;
 
                 // Color the text
-                resultsText.SelectionColor = textColor;
-
-                // Adds the text to the text box
-                resultsText.AppendText(output);
+                resultsText.AppendColoredText(output, textColor);
 
             }
         }
