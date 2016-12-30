@@ -1,24 +1,24 @@
-﻿using Dapper;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using Dapper;
+using System.IO;
 
 namespace SQLProcessorUI
 {
-    public partial class BulkExecuteForm : Form
+    public partial class SqlGeneratorForm : Form
     {
         List<string> connectionStrings = new List<string>();
         BindingSource connectionStringsBinding = new BindingSource();
 
-        public BulkExecuteForm()
+        public SqlGeneratorForm()
         {
             InitializeComponent();
 
@@ -78,7 +78,7 @@ namespace SQLProcessorUI
 
                 if (rows.Count() > 0)
                 {
-                    columns = (IDictionary<string,object>)rows.First();
+                    columns = (IDictionary<string, object>)rows.First();
 
                     int i = 0;
 

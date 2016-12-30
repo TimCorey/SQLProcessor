@@ -51,26 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BulkExecutionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulkExecutionForm.Designer.cs">
+      <DependentUpon>BulkExecutionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtensionMethods.cs" />
-    <Compile Include="BulkExecuteForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BulkExecuteForm.Designer.cs">
-      <DependentUpon>BulkExecuteForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InsertGeneratorForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InsertGeneratorForm.Designer.cs">
-      <DependentUpon>InsertGeneratorForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BulkExecuteForm.resx">
-      <DependentUpon>BulkExecuteForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InsertGeneratorForm.resx">
-      <DependentUpon>InsertGeneratorForm.cs</DependentUpon>
+    <Compile Include="SqlGeneratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SqlGeneratorForm.Designer.cs">
+      <DependentUpon>SqlGeneratorForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BulkExecutionForm.resx">
+      <DependentUpon>BulkExecutionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SqlGeneratorForm.resx">
+      <DependentUpon>SqlGeneratorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

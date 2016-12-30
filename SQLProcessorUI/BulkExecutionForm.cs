@@ -1,11 +1,9 @@
-﻿using Dapper;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +11,12 @@ using System.Windows.Forms;
 
 namespace SQLProcessorUI
 {
-    public partial class InsertGeneratorForm : Form
+    public partial class BulkExecutionForm : Form
     {
         List<string> connectionStrings = new List<string>();
         BindingSource connectionStringsBinding = new BindingSource();
 
-        public InsertGeneratorForm()
+        public BulkExecutionForm()
         {
             InitializeComponent();
 
@@ -47,7 +45,7 @@ namespace SQLProcessorUI
 
             connectionStringsBinding.ResetBindings(false);
         }
-      
+
 
         private void selectFolder_Click(object sender, EventArgs e)
         {
